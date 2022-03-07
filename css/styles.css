@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.sidebar {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 9;
+    background-color: rgb(44, 167, 224);
+    color: white;
+}
+
+
+
+.sidebar ul {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    gap: 20px;
+    margin-top: 5%;
+    margin-left: 5%;
+    
+}
+
+.sidebar ul li {
+
+    list-style-type: none;
+}
+
+.header {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    background-color: gray;
+    position: relative;
+    /*box-shadow: 15px 15px 20px 20px rgba(0, 0, 0, 0.45);*/
+}
+
+.header::after {
+    content: "";
+    width: 150%;
+    box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.30);
+}
+
+.header-left {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: bisque;
+}
+
+.header-right {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: beige;
+}
+
+.header-bottom-left {
+    background-color: lightcoral;
+}
+
+.header-bottom-right {
+    background-color: aqua;
+}
+
+.main-content {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 3 / 9;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    /*background-color: azure;*/
+}
+
+.project-contents {
+    display: grid;
+    grid-template-rows: 0.5fr 6fr;
+    grid-row: 1 / 5;
+    background-color: aliceblue;
+}
+
+.project-contents h2 {
+    margin-left: 5%;
+    margin-top: 2%;
+    overflow: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 20px;
+    margin-left: 5%;
+}
+
+.card {
+    
+    align-self: start;
+    background-color: white;
+    color: black;
+    
+    height: clamp(100px, 90%, 200px);
+    width: clamp(100px, 90%, 500px);
+    padding: 20px;
+    margin: 1%;
+
+    border-radius: 5px;
+
+}
+
+.news-contents {
+    grid-row: 1 / 5;
+    background-color: paleturquoise;
+}
+
+.news-contents h2 {
+    margin-top: 2%;
+    margin-left: 5%;
+}
