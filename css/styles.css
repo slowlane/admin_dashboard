@@ -150,7 +150,7 @@ li img {
     display: grid;
     grid-template-columns: clamp(100px, 10%, 200px) clamp(200px, 40%, 500px);
     align-items: center;
-    width: clamp(300px, 100%, 1200px);
+    width: clamp(300x, 100%, 1200px);
     
 }
 
@@ -167,7 +167,7 @@ li img {
 }
 
 .header-bottom-left p:nth-child(2){
-    width: clamp(300px, 15vw, 600px);
+    width: clamp(240px, 16vw, 700px);
     font-size: clamp(0.6rem, 4vw, 1.75rem);
     font-weight: 700;
 }
@@ -175,6 +175,7 @@ li img {
 .header-bottom-right {
     display: flex;
     align-items: center;
+    gap: 20px;
     
 }
 
@@ -189,7 +190,7 @@ li img {
     font-size: 1.1rem;
     font-weight: 600;
     padding: 12px 30px;
-    margin-left: 7%;
+    margin-right: 2%;
 }
 
 .main-content {
@@ -199,7 +200,7 @@ li img {
     grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 100%;
-    width: 100%;
+   
     background-color: aliceblue;
     /*background-color: azure;*/
 }
@@ -369,7 +370,7 @@ li img {
 
 .trendfeed li p {
     font-size: clamp(0.7rem, 0.8vw, 1.5rem);
-    line-height: clamp(0.4rem, 1vw, 0.9rem);
+
     align-self: center;
 }
 
