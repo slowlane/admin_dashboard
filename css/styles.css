@@ -5,6 +5,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.header-titles {
+    margin: 0;
+    padding: 0;
+}
+
 li img {
     padding: 0;
     margin: 0;
@@ -45,7 +50,7 @@ li img {
 
 .sidebar ul img {
     position: relative;
-    top: 8px;
+    top: 6.5px;
     height: 2rem;
     width: 2rem;
 }
@@ -73,10 +78,11 @@ li img {
 .header-left {
     display:grid;
     align-items: center;
-    /*grid-template-rows: 1fr 1fr;*/
+    grid-template-columns: 1fr 1fr;
 }
 
 .header-left div {
+    display: grid;
     margin-left: 3%;
 }
 
@@ -85,14 +91,20 @@ li img {
     top: 6px;
     height: 2rem;
     width: 2rem;
+    grid-row: 1;
+}
+
+.header-left label {
+    grid-row: 1;
 }
 
 .header-left input[type="search"] {
-    width: 80%;
+    width: clamp(300px, 20vw, 1200px);
     height: 3rem;
     padding: 1rem;
     font-size: 1.7rem;
     margin-left: 1%;
+    grid-row: 1;
 }
 
 .header-right {
@@ -130,6 +142,7 @@ li img {
     display: grid;
     grid-template-columns: clamp(100px, 10%, 200px) clamp(200px, 40%, 400px);
     align-items: center;
+    width: clamp(300px, 100%, 1200px);
     
 }
 
@@ -146,6 +159,7 @@ li img {
 }
 
 .header-bottom-left p:nth-child(2){
+    width: clamp(300px, 15vw, 600px);
     font-size: clamp(0.7rem, 5vw, 2rem);
 }
 
@@ -175,6 +189,7 @@ li img {
     grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 100%;
+    width: 100%;
     background-color: aliceblue;
     /*background-color: azure;*/
 }
@@ -200,12 +215,14 @@ li img {
 }
 
 .card {
-    
-    align-self: start;
+    display: grid;
+    gap: 5px;
+    /*align-self: start;*/
     background-color: white;
     color: black;
     
-    height: clamp(100px, 90%, 200px);
+    grid-template-rows: 0.8fr 5fr 0.6fr;
+    height: clamp(100px, 100%, 200px);
     width: clamp(100px, 90%, 500px);
     padding: 20px;
     margin: 1%;
@@ -213,44 +230,74 @@ li img {
     border-radius: 5px;
     box-shadow: 4px 5px 10px 5px rgba(0, 0, 0, 0.10);
 
+    border-left: 6px solid rgb(245, 191, 45);
+
+
+}
+
+.card div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.card button {
+    border-style: none;
+    background-color: white;
+
+}
+
+
+.card h2,
+.card p {
+    grid-column: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .news-contents {
     display: grid;
-    grid-template-rows: 0.2fr 1.5fr 1fr;
+    grid-template-rows: 0.6fr 4fr 0.5fr 2fr 0.25fr;
+   
     grid-row: 1 / 5;
+    
 
-    gap: 30px;
+}
 
+.news-contents h2 {
+    margin: 0;
+    grid-column: 1;
 }
 
 .news-contents > h2 {
     justify-self: start;
-    grid-row: 1 / 2;
-    margin-top: 7%;
+  
+    margin-top: 5%;
+    
     position: relative;
-    left: 16%;
+    left: clamp(15px, 15%, 120px);
 }
 
 .announcements, 
 .trending {
     display: grid;
     background-color: white;
- 
+    grid-column: 1;
     justify-self: center;
 
-    padding: 30px;
+    width: clamp(150px, 80%, 400px);
+    height: clamp(200px, 100%, 600px);
+
+    padding: 20px;
 
     border-radius: 8px;
+
+    box-shadow: 4px 5px 10px 5px rgba(0, 0, 0, 0.10);
 }
 
 .announcements {
-
     grid-row: 2 / 3;
-    width: clamp(150px, 80%, 400px);
-    height: clamp(200px, 100%, 600px);
-    padding: 20px;
-    box-shadow: 4px 5px 10px 5px rgba(0, 0, 0, 0.10);
+    padding: 1px;
+    
 }
 
 #newsfeed {
@@ -261,7 +308,7 @@ li img {
     width: clamp(60px, 100%, 300px);
     height: clamp(100px, 95%, 450px);
     margin: 0;
-    padding: 1.5rem;
+    padding: 1rem;
     list-style-type: none;
     
 
@@ -271,6 +318,11 @@ li img {
     padding: 0;
     margin: 0;
     margin-bottom: 1%;
+    font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+}
+
+.news-item p {
+    font-size: clamp(0.6rem, 0.8vw, 1.5rem);
 }
 
 #middle-news-item {
@@ -279,10 +331,8 @@ li img {
 }
 
 .trending {
-    grid-row: 3 / 4;
-    width: clamp(150px, 80%, 400px);
-    height: clamp(200px, 85%, 600px);
-    box-shadow: 4px 5px 10px 5px rgba(0, 0, 0, 0.10);
+    grid-row: 4 / 5;
+    
 }
 
 .trendfeed {
@@ -290,7 +340,7 @@ li img {
     grid-template: repeat(auto-fit, 1fr) / 1fr;
 
     gap: 10px;
-
+    
     list-style-type: none;
 }
 
@@ -300,8 +350,28 @@ li img {
     gap: 15px;
 }
 
+.trend-item {
+    display: grid;
+    align-self: center;
+    grid-template-rows: 1.1rem 1.1rem;
+    gap: 3px;
+}
+
 .trendfeed li p {
+    font-size: clamp(0.7rem, 0.8vw, 1.5rem);
+    line-height: clamp(0.4rem, 1vw, 0.9rem);
     align-self: center;
 }
 
+.trendfeed li button {
+    border-radius: 50%;
+    border-style: none;
+    background-color: azure;
+}
+
+
+
+#trend-header {
+    grid-row: 3 / 4;
+}
 
