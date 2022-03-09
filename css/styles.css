@@ -238,7 +238,7 @@ li img {
 .card div {
     display: flex;
     justify-content: flex-end;
-    gap: 5px;
+    gap: 20px;
 }
 .card button {
     border-style: none;
