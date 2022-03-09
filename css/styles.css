@@ -125,7 +125,6 @@ li img {
 .header-bottom-left {
     display: grid;
     grid-template-columns: 10% 40%;
-    font-size: 1rem;
     align-items: center;
     
 }
@@ -138,11 +137,12 @@ li img {
 }
 
 .header-bottom-left p {
-    margin-left: clamp(10px, 4%, 20px);
+    margin-left: clamp(20px, 4%, 30px);
+    font-size: clamp(0.75rem, 2.5vw, 1.5rem);
 }
 
 .header-bottom-left p:nth-child(2){
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2rem);
 }
 
 .header-bottom-right {
