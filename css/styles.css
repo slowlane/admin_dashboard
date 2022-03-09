@@ -124,7 +124,7 @@ li img {
 
 .header-bottom-left {
     display: grid;
-    grid-template-columns: 10% 40%;
+    grid-template-columns: clamp(100px, 10%, 200px) clamp(200px, 40%, 400px);
     align-items: center;
     
 }
@@ -138,11 +138,11 @@ li img {
 
 .header-bottom-left p {
     margin-left: clamp(20px, 4%, 30px);
-    font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
 }
 
 .header-bottom-left p:nth-child(2){
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: clamp(0.7rem, 5vw, 2rem);
 }
 
 .header-bottom-right {
@@ -235,7 +235,6 @@ li img {
  
     justify-self: center;
 
-    margin-top: 2%;
     padding: 30px;
 
     border-radius: 8px;
