@@ -232,7 +232,7 @@ li img {
     color: black;
     
     grid-template-rows: 0.8fr 5fr 0.6fr;
-    height: clamp(125px, 100%, 225px);
+    height: clamp(125px, 100%, 250px);
     width: clamp(100px, 90%, 500px);
     padding: 20px;
     margin: 1%;
@@ -294,7 +294,7 @@ li img {
     grid-column: 1;
     justify-self: center;
 
-    width: clamp(150px, 80%, 400px);
+    width: clamp(150px, 80%, 500px);
     height: clamp(200px, 100%, 600px);
 
     padding: 20px;
